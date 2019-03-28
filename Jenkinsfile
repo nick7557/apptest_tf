@@ -19,7 +19,7 @@ node{
     }
 
     stage('Build'){
-    eval $(aws ecr get-login | sed 's|https://||')
+    sh "\$(aws ecr get-login --no-include-email --region us-west-2)"
     sh "docker build -t ecr_docker_repository ."
     sh "docker tag ecr_docker_repository:latest ${repo_url}:${version}"
     sh "docker push ${repo_url}:${version}"
