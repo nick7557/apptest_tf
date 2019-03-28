@@ -1,5 +1,5 @@
 node{
-    def repo_url = "410829681883.dkr.ecr.us-west-2.amazonaws.com/ecr_docker_repository"
+    def repo_url = "852841908877.dkr.ecr.us-west-1.amazonaws.com/ecr_docker_repository"
     def version = "latest"
 
     //operation = [create| update]
